@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JsBridge</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="load_fail_click_retry">加载失败，可点击屏幕重试</string>
+    <string name="back">返回</string>
+</resources>

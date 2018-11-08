@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="25dp">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/custom_tool_bar"></include>
+
+    <pub.js.bridge.webview.BIMAWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:background="@color/color_transparent"/>
+
+    <ProgressBar
+        android:id="@+id/webview_content_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tool_bar"
+        android:layout_centerVertical="true"
+        android:layout_gravity="top"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:longClickable="false"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_bar_mini"/>
+
+    <FrameLayout
+        android:id="@+id/load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_empty_load"
+            android:text="@string/load_fail_click_retry"
+            android:textColor="@color/color_222222"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+
+</RelativeLayout>
